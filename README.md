@@ -1,16 +1,16 @@
-🗣️ #Voice Emotion Conversion (VEC) Model
+🗣️ Voice Emotion Conversion (VEC) Model
 
 
 Convert neutral speech to expressive emotions using deep learning
 
 
 
-📌 ##Overview
+📌 Overview
 
 
 This project aims to transform the emotion in an audio sample while preserving the speaker's identity. Unlike emotion recognition models, this approach modifies the emotional tone of speech using deep learning techniques like CycleGAN-VC, StarGAN-VC, and HiFi-GAN.
 
-**🔥 Features
+🔥 Features
 
 
 ✅ Converts neutral speech to emotions like happy, sad, angry, surprised
@@ -25,24 +25,33 @@ This project aims to transform the emotion in an audio sample while preserving t
 ✅ Pre-trained emotion embeddings for faster inference
 
 
-**📂 Dataset
+📂 Dataset
 
 
 This model is trained on publicly available emotional speech datasets:
 
 IEMOCAP
+
 CREMA-D
+
 RAVDESS
 
 
-**🏗️ Model Architecture
+🏗️ Model Architecture
 
 
 1️⃣ Feature Extraction
+
 Extract Mel spectrograms, F0 (pitch), and energy from input speech.
+
 Normalize features across the dataset.
+
 2️⃣ Emotion Conversion (CycleGAN-VC / StarGAN-VC)
+
 Train a CycleGAN model to convert emotions while preserving voice identity.
+
 Use StarGAN-VC2 for multi-emotion conversion.
+
 3️⃣ Speech Synthesis (HiFi-GAN)
+
 Convert the modified spectrogram back to a realistic waveform.
